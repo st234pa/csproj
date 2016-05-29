@@ -34,6 +34,9 @@ public class Board {
 		_board[coords[0]][coords[1]] = piece;
 		_numTiles++;
 		//flips pieces where necessary
+		flip();
+	}
+	public void flip() {
 		flip(piece, coords[0], coords[1], -1, 0);
 		flip(piece, coords[0], coords[1], -1, 1);
 		flip(piece, coords[0], coords[1], 0, 1);

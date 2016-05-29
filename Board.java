@@ -2,7 +2,11 @@ public class Board {
 	private String[][] _board;
 	private int _numTiles;
 	public Board() {
-		_board = new char[8][8];
+		_board = new String[8][8];
+		for (int i = 0; i < 8; i++) {
+			for (int j = 0; j < 8; j++)
+				_board[i][j] = "-";
+		}
 		_board[3][4] = "x";
 		_board[4][3] = "x";
 		_board[4][4] = "o";
@@ -25,7 +29,7 @@ public class Board {
 		}
 		return ans;
 	}
-	public void update(int[] coords) {
+	public void update(int[] coords, String piece) {
 
 	}
 }

@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Game {
 	private Board _board;
 	private Ai _ai;
-	private int _passes = 0;
+	private int _passes = 0; //This counts the number of passes IN A ROW.
 	public Game(Board b, Ai a) {
 		_board = b;
 		_ai = a;
@@ -11,17 +11,27 @@ public class Game {
 		while (passes < 2 && !(_board.isFull())) {
 			System.out.flush();
 			System.out.println(_board);
-			_board.update(playerTurn());
+			_board.update(playerTurn(), "x");
 		}
+		results();
 	} 
 	public int[] playerTurn() {
 		System.out.println("PLAYER'S TURN");
+		System.out.println("Enter the row and column where you want to place a tile (0-7). If you want to pass, enter -1, -1.");
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Row: ");
 		int r = scan.nextInt();
 		System.out.println("Column: ");
 		int c = scan.nextInt();
 		int[] coords = {r, c};
+		if (r == -1 && c == -1) _passes++;
+		else _passes = 0;
 		return coords;
+	}
+	public int[] computerTurn() {
+
+	}
+	public void results() {
+		
 	}
 }

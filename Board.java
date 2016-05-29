@@ -30,6 +30,12 @@ public class Board {
 		return ans;
 	}
 	public void update(int[] coords, String piece) {
-
+		if (coords[0] == -1) return;
+		_board[coords[0]][coords[1]] = piece;
+		_numTiles++;
+		//flips pieces where necessary
+	}
+	public int count(String piece) {
+		
 	}
 }

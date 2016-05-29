@@ -15,5 +15,10 @@ public class Ai {
 	public Ai(Board b) {
 		_board = b;
 	}
-	public static int 
+	public int evaluateBoard() {
+
+	}
+	public ArrayList<MoveCoord> genPriorityMoves() {
+		
+	}
 }

@@ -29,22 +29,22 @@ public class Board {
 		}
 		return ans;
 	}
-	public void update(int[] coords, String piece) {
-		if (coords[0] == -1) return;
-		_board[coords[0]][coords[1]] = piece;
+	public void update(MoveCoord coord, String piece) {
+		if (coord.getRow() == -1) return;
+		_board[coord.getRow()][coords.getCol()] = piece;
 		_numTiles++;
 		//flips pieces where necessary
-		flip(coords, piece);
+		flip(coord, piece);
 	}
-	public void flip(int[] coords, String piece) {
-		flip(piece, coords[0], coords[1], -1, 0);
-		flip(piece, coords[0], coords[1], -1, 1);
-		flip(piece, coords[0], coords[1], 0, 1);
-		flip(piece, coords[0], coords[1], 1, 1);
-		flip(piece, coords[0], coords[1], 1, 0);
-		flip(piece, coords[0], coords[1], 1, -1);
-		flip(piece, coords[0], coords[1], 0, -1);
-		flip(piece, coords[0], coords[1], -1, -1);
+	public void flip(MoveCoord coord, String piece) {
+		flip(piece, coord.getRow(), coord.getCol(), -1, 0);
+		flip(piece, coord.getRow(), coord.getCol(), -1, 1);
+		flip(piece, coord.getRow(), coord.getCol(), 0, 1);
+		flip(piece, coord.getRow(), coord.getCol(), 1, 1);
+		flip(piece, coord.getRow(), coord.getCol(), 1, 0);
+		flip(piece, coord.getRow(), coord.getCol(), 1, -1);
+		flip(piece, coord.getRow(), coord.getCol(), 0, -1);
+		flip(piece, coord.getRow(), coord.getCol(), -1, -1);
 	}
 	public void flip(String piece, int r, int c, int ud, int lr) {
 		if(r+ud > 7 && r+ud < 0 && c+lr > 7 && c+lr < 0) return;

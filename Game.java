@@ -18,7 +18,7 @@ public class Game {
 		}
 		results();
 	} 
-	public int[] playerTurn() {
+	public MoveCoord playerTurn() {
 		System.out.println("PLAYER'S TURN");
 		System.out.println("Enter the row and column where you want to place a tile (0-7). If you want to pass, enter -1, -1.");
 		Scanner scan = new Scanner(System.in);
@@ -26,12 +26,12 @@ public class Game {
 		int r = scan.nextInt();
 		System.out.print("Column: ");
 		int c = scan.nextInt();
-		int[] coords = {r, c};
+		MoveCoord p = new MoveCoord(r, c);
 		if (r == -1) _passes++;
 		else _passes = 0;
-		return coords;
+		return p;
 	}
-	public int[] computerTurn() { //ai will give a turn in the form of coordinates
+	public MoveCoord computerTurn() { //ai will give a turn in the form of coordinates
 		return null;
 	}
 	public void results() {

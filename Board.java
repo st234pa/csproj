@@ -34,6 +34,10 @@ public class Board {
 		_board[coords[0]][coords[1]] = piece;
 		_numTiles++;
 		//flips pieces where necessary
+		flip();
+	}
+	public void flip() {
+		
 	}
 	public int count(String piece) {
 		int ans = 0;

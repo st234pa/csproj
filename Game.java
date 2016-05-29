@@ -8,12 +8,13 @@ public class Game {
 		_ai = a;
 	}
 	public void run() {
-		while (passes < 2 && !(_board.isFull())) {
+		while (_passes < 2 && !(_board.isFull())) {
 			System.out.print("\033[H\033[2J");
 			System.out.flush();
 			System.out.println(_board);
 			_board.update(playerTurn(), "x");
 			System.out.println(_board);
+			_board.update(computerTurn(), "o");
 		}
 		results();
 	} 
@@ -30,8 +31,8 @@ public class Game {
 		else _passes = 0;
 		return coords;
 	}
-	public int[] computerTurn() {
-
+	public int[] computerTurn() { //ai will give a turn in the form of coordinates
+		return null;
 	}
 	public void results() {
 		int playerScore = _board.count("x");

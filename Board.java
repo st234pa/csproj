@@ -34,10 +34,20 @@ public class Board {
 		_board[coords[0]][coords[1]] = piece;
 		_numTiles++;
 		//flips pieces where necessary
-		flip();
+		flip(piece, coords[0], coords[1], -1, 0);
+		flip(piece, coords[0], coords[1], -1, 1);
+		flip(piece, coords[0], coords[1], 0, 1);
+		flip(piece, coords[0], coords[1], 1, 1);
+		flip(piece, coords[0], coords[1], 1, 0);
+		flip(piece, coords[0], coords[1], 1, -1);
+		flip(piece, coords[0], coords[1], 0, -1);
+		flip(piece, coords[0], coords[1], -1, -1);
 	}
-	public void flip() {
-		
+	public void flip(String piece, int r, int c, int ud, int lr) {
+		if(r+ud > 7 && r+ud < 0 && c+lr > 7 && c+lr < 0) return;
+		if (piece.equals(_board[r+ud][c+lr])) return;
+		_board[r+ud][c+lr] = piece;
+		flip(piece, r+ud, c+lr, ud, lr);
 	}
 	public int count(String piece) {
 		int ans = 0;

@@ -21,9 +21,9 @@ public class Game {
 		System.out.println("PLAYER'S TURN");
 		System.out.println("Enter the row and column where you want to place a tile (0-7). If you want to pass, enter -1, -1.");
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Row: ");
+		System.out.print("Row: ");
 		int r = scan.nextInt();
-		System.out.println("Column: ");
+		System.out.print("Column: ");
 		int c = scan.nextInt();
 		int[] coords = {r, c};
 		if (r == -1) _passes++;

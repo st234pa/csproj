@@ -8,9 +8,9 @@ public class Test {
 		System.out.print("\033[H\033[2J");
 		System.out.flush();
 		Scanner scan = new Scanner(System.in);
-		System.out.println("r");
+		System.out.print("r");
 		int r = scan.nextInt();
-		System.out.println("c");
+		System.out.print("c");
 		int c = scan.nextInt();
 		int[] coords = {r, c};
 		return coords;

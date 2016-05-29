@@ -36,6 +36,12 @@ public class Board {
 		//flips pieces where necessary
 	}
 	public int count(String piece) {
-		
+		int ans = 0;
+		for (int i = 0; i < 8; i++) {
+			for (int j = 0; j < 8; j++) {
+				if (_board[i][j].equals(piece)) ans++;
+			}
+		}
+		return ans;
 	}
 }

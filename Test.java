@@ -3,7 +3,7 @@ public class Test {
 	public static void main(String[] args) {
 		System.out.println(run()[0]);
 	}
-	public int[] run() {
+	public static int[] run() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("r");
 		int r = scan.nextInt();

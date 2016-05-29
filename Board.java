@@ -31,7 +31,7 @@ public class Board {
 	}
 	public void update(MoveCoord coord, String piece) {
 		if (coord.getRow() == -1) return;
-		_board[coord.getRow()][coords.getCol()] = piece;
+		_board[coord.getRow()][coord.getCol()] = piece;
 		_numTiles++;
 		//flips pieces where necessary
 		flip(coord, piece);

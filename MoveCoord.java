@@ -1,6 +1,6 @@
 public class MoveCoord {
 	private int _row, _col;
-	public MoveCoords(int r, int c) {
+	public MoveCoord(int r, int c) {
 		_row = r;
 		_col = c;
 	}

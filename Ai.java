@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import.java.util.PriorityQueue;
+import java.util.ArrayList;  
+import java.util.PriorityQueue;
 public class Ai {
 	private Board _board;
 	private static int[][] BOARDVALUE = {
@@ -16,9 +16,9 @@ public class Ai {
 		_board = b;
 	}
 	public int evaluateBoard() {
-
+		return -1;
 	}
 	public ArrayList<MoveCoord> genPriorityMoves() {
-		
+		return null;
 	}
 }
